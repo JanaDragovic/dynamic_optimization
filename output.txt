@@ -1,0 +1,68 @@
+Viterbijevo dekodovanje za HMM
+Skrivena stanja: Kisa, Oblak, Sunce
+Opservacije: NE, DA
+Pocetno stanje: Kisa
+
+Test 1: Sekvenca iz zadatka
+Opservaciona sekvenca: ['NE', 'DA', 'NE', 'NE', 'NE']
+Viterbi rezultat: ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Kisa']
+Verovatnoca: 7.873200e-03
+Top 10 sekvenci po verovatnoci:
+  1. ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Kisa'] : 7.873200e-03 <-- Optimalna putanja
+  2. ['Kisa', 'Sunce', 'Oblak', 'Kisa', 'Kisa'] : 4.199040e-03
+  3. ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Kisa'] : 4.100625e-03
+  4. ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Oblak'] : 3.149280e-03
+  5. ['Kisa', 'Oblak', 'Kisa', 'Oblak', 'Kisa'] : 2.519424e-03
+  6. ['Kisa', 'Oblak', 'Oblak', 'Kisa', 'Kisa'] : 2.099520e-03
+  7. ['Kisa', 'Sunce', 'Oblak', 'Kisa', 'Oblak'] : 1.679616e-03
+  8. ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Oblak'] : 1.640250e-03
+  9. ['Kisa', 'Kisa', 'Kisa', 'Oblak', 'Kisa'] : 1.312200e-03
+  10. ['Kisa', 'Kisa', 'Oblak', 'Kisa', 'Kisa'] : 1.312200e-03
+
+Test 2: Stalno dobro raspolozenje
+Opservaciona sekvenca: ['DA', 'DA', 'DA', 'DA', 'DA']
+Viterbi rezultat: ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Sunce']
+Verovatnoca: 2.809856e-03
+Top 10 sekvenci po verovatnoci:
+  1. ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Sunce'] : 2.809856e-03 <-- Optimalna putanja
+  2. ['Kisa', 'Oblak', 'Sunce', 'Sunce', 'Sunce'] : 1.204224e-03
+  3. ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Oblak'] : 6.021120e-04
+  4. ['Kisa', 'Sunce', 'Oblak', 'Sunce', 'Sunce'] : 3.440640e-04
+  5. ['Kisa', 'Sunce', 'Sunce', 'Oblak', 'Sunce'] : 3.440640e-04
+  6. ['Kisa', 'Oblak', 'Sunce', 'Sunce', 'Oblak'] : 2.580480e-04
+  7. ['Kisa', 'Kisa', 'Sunce', 'Sunce', 'Sunce'] : 2.508800e-04
+  8. ['Kisa', 'Oblak', 'Oblak', 'Sunce', 'Sunce'] : 1.720320e-04
+  9. ['Kisa', 'Oblak', 'Sunce', 'Oblak', 'Sunce'] : 1.474560e-04
+  10. ['Kisa', 'Kisa', 'Oblak', 'Sunce', 'Sunce'] : 1.075200e-04
+
+Test 3: Stalno lose raspolozenje
+Opservaciona sekvenca: ['NE', 'NE', 'NE', 'NE', 'NE']
+Viterbi rezultat: ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Kisa']
+Verovatnoca: 3.690563e-02
+Top 10 sekvenci po verovatnoci:
+  1. ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Kisa'] : 3.690563e-02 <-- Optimalna putanja
+  2. ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Oblak'] : 1.476225e-02
+  3. ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Kisa'] : 1.180980e-02
+  4. ['Kisa', 'Kisa', 'Kisa', 'Oblak', 'Kisa'] : 1.180980e-02
+  5. ['Kisa', 'Kisa', 'Oblak', 'Kisa', 'Kisa'] : 1.180980e-02
+  6. ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Oblak'] : 4.723920e-03
+  7. ['Kisa', 'Kisa', 'Oblak', 'Kisa', 'Oblak'] : 4.723920e-03
+  8. ['Kisa', 'Kisa', 'Kisa', 'Oblak', 'Oblak'] : 3.936600e-03
+  9. ['Kisa', 'Oblak', 'Kisa', 'Oblak', 'Kisa'] : 3.779136e-03
+  10. ['Kisa', 'Kisa', 'Kisa', 'Kisa', 'Sunce'] : 3.280500e-03
+
+Test 4: Naizmenicno raspolozenje
+Opservaciona sekvenca: ['NE', 'DA', 'NE', 'DA', 'NE']
+Viterbi rezultat: ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Oblak']
+Verovatnoca: 2.032128e-03
+Top 10 sekvenci po verovatnoci:
+  1. ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Oblak'] : 2.032128e-03 <-- Optimalna putanja
+  2. ['Kisa', 'Oblak', 'Kisa', 'Oblak', 'Kisa'] : 1.679616e-03
+  3. ['Kisa', 'Sunce', 'Sunce', 'Sunce', 'Sunce'] : 1.580544e-03
+  4. ['Kisa', 'Sunce', 'Oblak', 'Sunce', 'Oblak'] : 1.492992e-03
+  5. ['Kisa', 'Sunce', 'Oblak', 'Sunce', 'Sunce'] : 1.161216e-03
+  6. ['Kisa', 'Oblak', 'Kisa', 'Sunce', 'Oblak'] : 1.119744e-03
+  7. ['Kisa', 'Kisa', 'Kisa', 'Oblak', 'Kisa'] : 8.748000e-04
+  8. ['Kisa', 'Oblak', 'Kisa', 'Kisa', 'Kisa'] : 8.748000e-04
+  9. ['Kisa', 'Oblak', 'Kisa', 'Sunce', 'Sunce'] : 8.709120e-04
+  10. ['Kisa', 'Oblak', 'Sunce', 'Sunce', 'Oblak'] : 8.709120e-04
